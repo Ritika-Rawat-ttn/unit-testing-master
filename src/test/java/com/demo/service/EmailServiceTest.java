@@ -14,11 +14,11 @@ import static org.junit.Assert.assertTrue;
 @RunWith(MockitoJUnitRunner.class)
 public class EmailServiceTest {
 
-    @Mock
+    @Mock           //The purpose of mock is to focus on code being tested
     Order ord;
 
 
-    @InjectMocks
+    @InjectMocks            //Mock annotation
     EmailService email;
 
 
@@ -26,14 +26,9 @@ public class EmailServiceTest {
     public ExpectedException Ex = ExpectedException.none();
 
 
-//    @Test
-//    public void test_mockstaticmethod_instanceofemail(){
-//        EmailService email2=EmailService.getInstance();
-//        assertTrue(email2 intanceof EmailService);
 
-    //}
     @Test
-    public void test_MockStaticMethod_expectInstanceOfEmailService(){
+    public void test_Mockstaticmethod_expectinstanceOfEmailService(){
         EmailService es2 = EmailService.getInstance();
         assertTrue(es2 instanceof EmailService);
     }
